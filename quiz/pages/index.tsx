@@ -67,6 +67,7 @@ export default function Home() {
     <Questionario
       questao={questao}
       ultima={idProximaPergunta() === undefined}
+      tempoResposta={60}
       questaoRespondida={questaoRespondida}
       irPraProximoPasso={irPraProximoPasso} />
   ) : false

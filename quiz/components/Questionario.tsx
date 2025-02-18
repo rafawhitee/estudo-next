@@ -6,6 +6,7 @@ import QuestaoModel from "../model/questao"
 interface QuestionarioProps {
     questao: QuestaoModel
     ultima: boolean
+    tempoResposta: number
     questaoRespondida: (questao: QuestaoModel) => void
     irPraProximoPasso: () => void
 }
@@ -23,7 +24,7 @@ export default function Questionario(props: QuestionarioProps) {
             {props.questao ?
                 <Questao
                     valor={props.questao}
-                    tempoPraResposta={6}
+                    tempoPraResposta={props.tempoResposta}
                     respostaFornecida={respostaFornecida}
                     tempoEsgotado={props.irPraProximoPasso} />
                 : false
